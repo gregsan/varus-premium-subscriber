@@ -398,9 +398,9 @@ export default function SubscribeDesktopPage() {
             <a href="#faq" className="transition-colors hover:text-foreground">Умови</a>
           </div>
           {isActive ? (
-            <Button size="sm" className="rounded-full" onClick={() => router.push('##')}>Мій кабінет</Button>
+            <Button size="sm" className="rounded-full" disabled>Мій кабінет</Button>
           ) : (
-            <Button size="sm" className="rounded-full" onClick={() => router.push('##')}>Спробувати за 1 грн</Button>
+            <Button size="sm" className="rounded-full" disabled>Спробувати за 1 грн</Button>
           )}
         </div>
       </nav>
@@ -432,12 +432,12 @@ export default function SubscribeDesktopPage() {
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
             {isActive ? (
-              <Button size="lg" className="h-14 rounded-full px-8 text-base shadow-[0_0_40px_rgba(245,131,31,0.35)]" onClick={() => router.push('/dashboard')}>
+              <Button size="lg" className="h-14 rounded-full px-8 text-base shadow-[0_0_40px_rgba(245,131,31,0.35)]" disabled>
                 Перейти в кабінет
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             ) : (
-              <Button size="lg" className="h-14 rounded-full px-8 text-base shadow-[0_0_40px_rgba(245,131,31,0.35)]" onClick={() => setCheckoutOpen(true)}>
+              <Button size="lg" className="h-14 rounded-full px-8 text-base shadow-[0_0_40px_rgba(245,131,31,0.35)]" disabled>
                 Спробувати за 1 грн
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -511,9 +511,9 @@ export default function SubscribeDesktopPage() {
           <h2 className="text-4xl font-semibold tracking-tight md:text-5xl">Почніть економити вже сьогодні</h2>
           <p className="mt-4 text-white/55">Перший місяць — 1 грн. Далі 199 грн/місяць.</p>
           {isActive ? (
-            <Button size="lg" className="mt-8 h-14 rounded-full px-8 text-base shadow-[0_0_40px_rgba(245,131,31,0.35)]" onClick={() => router.push('##')}>Мій кабінет</Button>
+            <Button size="lg" className="mt-8 h-14 rounded-full px-8 text-base shadow-[0_0_40px_rgba(245,131,31,0.35)]" disabled>Мій кабінет</Button>
           ) : (
-            <Button size="lg" className="mt-8 h-14 rounded-full px-8 text-base shadow-[0_0_40px_rgba(245,131,31,0.35)]" onClick={() => router.push('##')}>Спробувати за 1 грн</Button>
+            <Button size="lg" className="mt-8 h-14 rounded-full px-8 text-base shadow-[0_0_40px_rgba(245,131,31,0.35)]" disabled>Спробувати за 1 грн</Button>
           )}
         </motion.div>
       </section>
